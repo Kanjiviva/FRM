@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AADA29641C96889E00595F90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA29631C96889E00595F90 /* main.m */; };
+		AADA29671C96889E00595F90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA29661C96889E00595F90 /* AppDelegate.m */; };
+		AADA296A1C96889E00595F90 /* FRMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA29691C96889E00595F90 /* FRMCategoryViewController.m */; };
+		AADA296D1C96889E00595F90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADA296B1C96889E00595F90 /* Main.storyboard */; };
+		AADA296F1C96889E00595F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AADA296E1C96889E00595F90 /* Assets.xcassets */; };
+		AADA29721C96889E00595F90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AADA29701C96889E00595F90 /* LaunchScreen.storyboard */; };
+		AADA297D1C96889E00595F90 /* FridgeMeasureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA297C1C96889E00595F90 /* FridgeMeasureTests.m */; };
+		AADA298B1C96897B00595F90 /* FRMCategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA298A1C96897B00595F90 /* FRMCategoryTableViewCell.m */; };
+		AADA298E1C968ABC00595F90 /* FRMListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA298D1C968ABC00595F90 /* FRMListTableViewController.m */; };
+		AADA299E1C968DEE00595F90 /* CategoryType.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA299D1C968DEE00595F90 /* CategoryType.m */; };
+		AADA29A11C9691D200595F90 /* FRMAddFoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA29A01C9691D200595F90 /* FRMAddFoodViewController.m */; };
+		AAEA19601C969BC100DBD0EF /* FoodDetail.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AAEA195E1C969BC100DBD0EF /* FoodDetail.xcdatamodeld */; };
+		AAEA19631C969C1400DBD0EF /* DataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA19621C969C1400DBD0EF /* DataStack.m */; };
+		AAEA19681C96A2BB00DBD0EF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA19671C96A2BB00DBD0EF /* CoreData.framework */; };
+		AAEA196C1C96A39300DBD0EF /* FRMListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA196B1C96A39300DBD0EF /* FRMListTableViewCell.m */; };
+		AAED6C4F1C98791F0091B57F /* Food+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED6C4C1C98791F0091B57F /* Food+CoreDataProperties.m */; };
+		AAED6C501C98791F0091B57F /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED6C4E1C98791F0091B57F /* Food.m */; };
+		AAED6C531C987A600091B57F /* Food+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED6C521C987A600091B57F /* Food+helper.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AADA29791C96889E00595F90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AADA29571C96889E00595F90 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AADA295E1C96889E00595F90;
+			remoteInfo = FridgeMeasure;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AADA295F1C96889E00595F90 /* FridgeMeasure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeMeasure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADA29631C96889E00595F90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AADA29651C96889E00595F90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AADA29661C96889E00595F90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AADA29681C96889E00595F90 /* FRMCategoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FRMCategoryViewController.h; sourceTree = "<group>"; };
+		AADA29691C96889E00595F90 /* FRMCategoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FRMCategoryViewController.m; sourceTree = "<group>"; };
+		AADA296C1C96889E00595F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AADA296E1C96889E00595F90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AADA29711C96889E00595F90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AADA29731C96889E00595F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADA29781C96889E00595F90 /* FridgeMeasureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeMeasureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADA297C1C96889E00595F90 /* FridgeMeasureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FridgeMeasureTests.m; sourceTree = "<group>"; };
+		AADA297E1C96889E00595F90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AADA29891C96897B00595F90 /* FRMCategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRMCategoryTableViewCell.h; sourceTree = "<group>"; };
+		AADA298A1C96897B00595F90 /* FRMCategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRMCategoryTableViewCell.m; sourceTree = "<group>"; };
+		AADA298C1C968ABC00595F90 /* FRMListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRMListTableViewController.h; sourceTree = "<group>"; };
+		AADA298D1C968ABC00595F90 /* FRMListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRMListTableViewController.m; sourceTree = "<group>"; };
+		AADA299C1C968DEE00595F90 /* CategoryType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryType.h; sourceTree = "<group>"; };
+		AADA299D1C968DEE00595F90 /* CategoryType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryType.m; sourceTree = "<group>"; };
+		AADA299F1C9691D200595F90 /* FRMAddFoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRMAddFoodViewController.h; sourceTree = "<group>"; };
+		AADA29A01C9691D200595F90 /* FRMAddFoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRMAddFoodViewController.m; sourceTree = "<group>"; };
+		AAEA195F1C969BC100DBD0EF /* FoodDetail.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodDetail.xcdatamodel; sourceTree = "<group>"; };
+		AAEA19611C969C1400DBD0EF /* DataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataStack.h; sourceTree = "<group>"; };
+		AAEA19621C969C1400DBD0EF /* DataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataStack.m; sourceTree = "<group>"; };
+		AAEA19671C96A2BB00DBD0EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AAEA196A1C96A39300DBD0EF /* FRMListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRMListTableViewCell.h; sourceTree = "<group>"; };
+		AAEA196B1C96A39300DBD0EF /* FRMListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRMListTableViewCell.m; sourceTree = "<group>"; };
+		AAED6C4B1C98791F0091B57F /* Food+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Food+CoreDataProperties.h"; path = "../Food+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AAED6C4C1C98791F0091B57F /* Food+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Food+CoreDataProperties.m"; path = "../Food+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AAED6C4D1C98791F0091B57F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = ../Food.h; sourceTree = "<group>"; };
+		AAED6C4E1C98791F0091B57F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = ../Food.m; sourceTree = "<group>"; };
+		AAED6C511C987A600091B57F /* Food+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food+helper.h"; sourceTree = "<group>"; };
+		AAED6C521C987A600091B57F /* Food+helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Food+helper.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AADA295C1C96889E00595F90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAEA19681C96A2BB00DBD0EF /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADA29751C96889E00595F90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AADA29561C96889E00595F90 = {
+			isa = PBXGroup;
+			children = (
+				AADA29611C96889E00595F90 /* FridgeMeasure */,
+				AADA297B1C96889E00595F90 /* FridgeMeasureTests */,
+				AADA29601C96889E00595F90 /* Products */,
+				AAEA19691C96A2DC00DBD0EF /* Framework */,
+			);
+			sourceTree = "<group>";
+		};
+		AADA29601C96889E00595F90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AADA295F1C96889E00595F90 /* FridgeMeasure.app */,
+				AADA29781C96889E00595F90 /* FridgeMeasureTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AADA29611C96889E00595F90 /* FridgeMeasure */ = {
+			isa = PBXGroup;
+			children = (
+				AADA298F1C968B8300595F90 /* Model */,
+				AADA29881C96895D00595F90 /* TableViewCell */,
+				AADA29871C96895400595F90 /* ViewController */,
+				AADA29651C96889E00595F90 /* AppDelegate.h */,
+				AADA29661C96889E00595F90 /* AppDelegate.m */,
+				AADA296B1C96889E00595F90 /* Main.storyboard */,
+				AADA296E1C96889E00595F90 /* Assets.xcassets */,
+				AADA29701C96889E00595F90 /* LaunchScreen.storyboard */,
+				AADA29731C96889E00595F90 /* Info.plist */,
+				AADA29621C96889E00595F90 /* Supporting Files */,
+			);
+			path = FridgeMeasure;
+			sourceTree = "<group>";
+		};
+		AADA29621C96889E00595F90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AADA29631C96889E00595F90 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AADA297B1C96889E00595F90 /* FridgeMeasureTests */ = {
+			isa = PBXGroup;
+			children = (
+				AADA297C1C96889E00595F90 /* FridgeMeasureTests.m */,
+				AADA297E1C96889E00595F90 /* Info.plist */,
+			);
+			path = FridgeMeasureTests;
+			sourceTree = "<group>";
+		};
+		AADA29871C96895400595F90 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AADA29681C96889E00595F90 /* FRMCategoryViewController.h */,
+				AADA29691C96889E00595F90 /* FRMCategoryViewController.m */,
+				AADA298C1C968ABC00595F90 /* FRMListTableViewController.h */,
+				AADA298D1C968ABC00595F90 /* FRMListTableViewController.m */,
+				AADA299F1C9691D200595F90 /* FRMAddFoodViewController.h */,
+				AADA29A01C9691D200595F90 /* FRMAddFoodViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		AADA29881C96895D00595F90 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AADA29891C96897B00595F90 /* FRMCategoryTableViewCell.h */,
+				AADA298A1C96897B00595F90 /* FRMCategoryTableViewCell.m */,
+				AAEA196A1C96A39300DBD0EF /* FRMListTableViewCell.h */,
+				AAEA196B1C96A39300DBD0EF /* FRMListTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		AADA298F1C968B8300595F90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAED6C4B1C98791F0091B57F /* Food+CoreDataProperties.h */,
+				AAED6C4C1C98791F0091B57F /* Food+CoreDataProperties.m */,
+				AAED6C4D1C98791F0091B57F /* Food.h */,
+				AAED6C4E1C98791F0091B57F /* Food.m */,
+				AADA299C1C968DEE00595F90 /* CategoryType.h */,
+				AADA299D1C968DEE00595F90 /* CategoryType.m */,
+				AAEA19611C969C1400DBD0EF /* DataStack.h */,
+				AAEA19621C969C1400DBD0EF /* DataStack.m */,
+				AAEA195E1C969BC100DBD0EF /* FoodDetail.xcdatamodeld */,
+				AAED6C511C987A600091B57F /* Food+helper.h */,
+				AAED6C521C987A600091B57F /* Food+helper.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AAEA19691C96A2DC00DBD0EF /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				AAEA19671C96A2BB00DBD0EF /* CoreData.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AADA295E1C96889E00595F90 /* FridgeMeasure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADA29811C96889E00595F90 /* Build configuration list for PBXNativeTarget "FridgeMeasure" */;
+			buildPhases = (
+				AADA295B1C96889E00595F90 /* Sources */,
+				AADA295C1C96889E00595F90 /* Frameworks */,
+				AADA295D1C96889E00595F90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FridgeMeasure;
+			productName = FridgeMeasure;
+			productReference = AADA295F1C96889E00595F90 /* FridgeMeasure.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AADA29771C96889E00595F90 /* FridgeMeasureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADA29841C96889E00595F90 /* Build configuration list for PBXNativeTarget "FridgeMeasureTests" */;
+			buildPhases = (
+				AADA29741C96889E00595F90 /* Sources */,
+				AADA29751C96889E00595F90 /* Frameworks */,
+				AADA29761C96889E00595F90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AADA297A1C96889E00595F90 /* PBXTargetDependency */,
+			);
+			name = FridgeMeasureTests;
+			productName = FridgeMeasureTests;
+			productReference = AADA29781C96889E00595F90 /* FridgeMeasureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AADA29571C96889E00595F90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Steve;
+				TargetAttributes = {
+					AADA295E1C96889E00595F90 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					AADA29771C96889E00595F90 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = AADA295E1C96889E00595F90;
+					};
+				};
+			};
+			buildConfigurationList = AADA295A1C96889E00595F90 /* Build configuration list for PBXProject "FridgeMeasure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AADA29561C96889E00595F90;
+			productRefGroup = AADA29601C96889E00595F90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AADA295E1C96889E00595F90 /* FridgeMeasure */,
+				AADA29771C96889E00595F90 /* FridgeMeasureTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AADA295D1C96889E00595F90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADA29721C96889E00595F90 /* LaunchScreen.storyboard in Resources */,
+				AADA296F1C96889E00595F90 /* Assets.xcassets in Resources */,
+				AADA296D1C96889E00595F90 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADA29761C96889E00595F90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AADA295B1C96889E00595F90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAED6C501C98791F0091B57F /* Food.m in Sources */,
+				AAEA19631C969C1400DBD0EF /* DataStack.m in Sources */,
+				AADA296A1C96889E00595F90 /* FRMCategoryViewController.m in Sources */,
+				AADA29671C96889E00595F90 /* AppDelegate.m in Sources */,
+				AADA29A11C9691D200595F90 /* FRMAddFoodViewController.m in Sources */,
+				AADA29641C96889E00595F90 /* main.m in Sources */,
+				AAEA19601C969BC100DBD0EF /* FoodDetail.xcdatamodeld in Sources */,
+				AADA299E1C968DEE00595F90 /* CategoryType.m in Sources */,
+				AAEA196C1C96A39300DBD0EF /* FRMListTableViewCell.m in Sources */,
+				AADA298E1C968ABC00595F90 /* FRMListTableViewController.m in Sources */,
+				AADA298B1C96897B00595F90 /* FRMCategoryTableViewCell.m in Sources */,
+				AAED6C4F1C98791F0091B57F /* Food+CoreDataProperties.m in Sources */,
+				AAED6C531C987A600091B57F /* Food+helper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADA29741C96889E00595F90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADA297D1C96889E00595F90 /* FridgeMeasureTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AADA297A1C96889E00595F90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AADA295E1C96889E00595F90 /* FridgeMeasure */;
+			targetProxy = AADA29791C96889E00595F90 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AADA296B1C96889E00595F90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AADA296C1C96889E00595F90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AADA29701C96889E00595F90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AADA29711C96889E00595F90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AADA297F1C96889E00595F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AADA29801C96889E00595F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AADA29821C96889E00595F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FridgeMeasure/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Steve.FridgeMeasure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AADA29831C96889E00595F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FridgeMeasure/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Steve.FridgeMeasure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AADA29851C96889E00595F90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FridgeMeasureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Steve.FridgeMeasureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FridgeMeasure.app/FridgeMeasure";
+			};
+			name = Debug;
+		};
+		AADA29861C96889E00595F90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FridgeMeasureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Steve.FridgeMeasureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FridgeMeasure.app/FridgeMeasure";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AADA295A1C96889E00595F90 /* Build configuration list for PBXProject "FridgeMeasure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADA297F1C96889E00595F90 /* Debug */,
+				AADA29801C96889E00595F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADA29811C96889E00595F90 /* Build configuration list for PBXNativeTarget "FridgeMeasure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADA29821C96889E00595F90 /* Debug */,
+				AADA29831C96889E00595F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADA29841C96889E00595F90 /* Build configuration list for PBXNativeTarget "FridgeMeasureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADA29851C96889E00595F90 /* Debug */,
+				AADA29861C96889E00595F90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AAEA195E1C969BC100DBD0EF /* FoodDetail.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AAEA195F1C969BC100DBD0EF /* FoodDetail.xcdatamodel */,
+			);
+			currentVersion = AAEA195F1C969BC100DBD0EF /* FoodDetail.xcdatamodel */;
+			path = FoodDetail.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AADA29571C96889E00595F90 /* Project object */;
+}
