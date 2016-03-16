@@ -4,9 +4,10 @@
         <attribute name="category" attributeType="String" syncable="YES"/>
         <attribute name="date" attributeType="Date" syncable="YES"/>
         <attribute name="foodName" attributeType="String" syncable="YES"/>
+        <attribute name="isExpired" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="unit" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Food" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Food" positionX="-63" positionY="-18" width="128" height="120"/>
     </elements>
 </model>

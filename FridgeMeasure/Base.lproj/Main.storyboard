@@ -112,7 +112,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-03-14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdP-89-qXd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdP-89-qXd">
                                 <rect key="frame" x="20" y="110" width="560" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="92.5" id="d6C-nF-pOo"/>
@@ -367,7 +367,13 @@
                             <outlet property="delegate" destination="kc9-tC-Rv6" id="x4H-mB-x0O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TAa-4L-S7T"/>
+                    <navigationItem key="navigationItem" id="TAa-4L-S7T">
+                        <barButtonItem key="rightBarButtonItem" title="Empty Expired List" id="1jR-ld-gaM">
+                            <connections>
+                                <action selector="emptyExpiredButtonTapped:" destination="kc9-tC-Rv6" id="les-4U-cYP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="6V1-vE-06y" id="s3o-l6-dIU"/>
                     </connections>

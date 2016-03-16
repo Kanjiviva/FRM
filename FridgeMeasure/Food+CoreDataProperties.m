@@ -17,5 +17,6 @@
 @dynamic date;
 @dynamic foodName;
 @dynamic unit;
+@dynamic isExpired;
 
 @end

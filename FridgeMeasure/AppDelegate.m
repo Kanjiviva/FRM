@@ -49,14 +49,14 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"FoodExpired" object:nil];
-    
+    [self showAlertViewWhenAppIsRunningWithNotification:notification];
 }
-
 
 - (void)showAlertViewWhenAppIsRunningWithNotification:(UILocalNotification *)notification {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Reminder" message:notification.alertBody preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
     [controller addAction:cancel];
+    [self.window.rootViewController presentViewController:controller animated:YES completion:nil];
 }
 
 @end

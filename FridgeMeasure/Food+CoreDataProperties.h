@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSDate *date;
 @property (nullable, nonatomic, retain) NSString *foodName;
 @property (nullable, nonatomic, retain) NSString *unit;
+@property (nullable, nonatomic, retain) NSNumber *isExpired;
 
 @end
 

@@ -12,13 +12,14 @@
 
 // Insert code here to add functionality to your managed object subclass
 
-+ (Food *)insertWithManageObjectContext:(NSManagedObjectContext *)context withName:(NSString *)name withDate:(NSDate *)date withUnit:(NSString *)unit withCategory:(NSString *)category {
++ (Food *)insertWithManageObjectContext:(NSManagedObjectContext *)context withName:(NSString *)name withDate:(NSDate *)date withUnit:(NSString *)unit withCategory:(NSString *)category isExpired:(NSNumber *)isExpired {
     
     Food *food = [NSEntityDescription insertNewObjectForEntityForName:@"Food" inManagedObjectContext:context];
     food.foodName = name;
     food.date = date;
     food.unit = unit;
-    food.category = name;
+    food.category = category;
+    food.isExpired = isExpired;
     return food;
 }
 

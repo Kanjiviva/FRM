@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Food : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
-+ (Food *)insertWithManageObjectContext:(NSManagedObjectContext *)context withName:(NSString *)name withDate:(NSDate *)date withUnit:(NSString *)unit withCategory:(NSString *)category;
++ (Food *)insertWithManageObjectContext:(NSManagedObjectContext *)context withName:(NSString *)name withDate:(NSDate *)date withUnit:(NSString *)unit withCategory:(NSString *)category isExpired:(NSNumber *)isExpired;
 + (NSArray *)fetchWithContext:(NSManagedObjectContext *)context;
 
 

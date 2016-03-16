@@ -35,4 +35,12 @@
     self.categoryLabel.text = self.category.name;
 }
 
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    if (highlighted) {
+        self.backgroundColor = [UIColor lightGrayColor];
+    } else {
+        self.backgroundColor = [UIColor whiteColor];
+    }
+}
+
 @end

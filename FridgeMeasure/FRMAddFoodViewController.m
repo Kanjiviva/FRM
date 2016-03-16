@@ -64,7 +64,7 @@
     
     UILocalNotification *localNotification = [[UILocalNotification alloc] init];
     localNotification.fireDate = pickerDate;
-    localNotification.alertBody = [NSString stringWithFormat:@"%@ is almost expired", self.nameTextField.text];
+    localNotification.alertBody = [NSString stringWithFormat:@"%@ is expired", self.nameTextField.text];
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
     
@@ -86,7 +86,7 @@
     
     if (![self.nameTextField.text isEqualToString:@""] && ![self.unitTextField.text isEqualToString:@""]) {
         
-        self.food = [Food insertWithManageObjectContext:[DataStack sharedManager].context withName:self.nameTextField.text withDate:self.datePicker.date withUnit:self.unitTextField.text withCategory:self.category.name];
+        self.food = [Food insertWithManageObjectContext:[DataStack sharedManager].context withName:self.nameTextField.text withDate:self.datePicker.date withUnit:self.unitTextField.text withCategory:self.category.name isExpired:@0];
         
         [[DataStack sharedManager] save];
         

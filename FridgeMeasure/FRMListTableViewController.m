@@ -54,6 +54,23 @@
 
 #pragma mark - IBActions -
 
+- (IBAction)emptyExpiredButtonTapped:(UIBarButtonItem *)sender {
+    
+    NSMutableArray *toDelete = [NSMutableArray new];
+    
+    for (Food *food in self.listArray) {
+        if (food.isExpired.boolValue) {
+            [[DataStack sharedManager] deleteObject:food];
+            [toDelete addObject:food];
+        }
+    }
+    [[DataStack sharedManager] save];
+    
+    [self.listArray removeObjectsInArray:toDelete];
+    
+    [self.tableView reloadData];
+}
+
 - (IBAction)cancelButtonTapped:(UIButton *)sender {
     self.searchBar.text = @"";
     [self.searchBar resignFirstResponder];
@@ -96,27 +113,29 @@
     
     FRMListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCell" forIndexPath:indexPath];
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     BOOL isExpired;
     
     if (self.isFiltered) {
         Food *food = self.filterArray[indexPath.row];
         isExpired = [food.date compare:[NSDate date]] == NSOrderedAscending;
+        food.isExpired = [NSNumber numberWithBool:isExpired];
         [cell configureWithName:food.foodName
                        withDate:[FRMListTableViewCellModel dateForFoodItem:food]
                        withUnit:food.unit
                    withCategory:food.category
-                      isExpired:isExpired];
+                      isExpired:food.isExpired];
     } else {
         Food *food = self.listArray[indexPath.row];
         isExpired = [food.date compare:[NSDate date]] == NSOrderedAscending;
+        food.isExpired = [NSNumber numberWithBool:isExpired];
         [cell configureWithName:food.foodName
                        withDate:[FRMListTableViewCellModel dateForFoodItem:food]
                        withUnit:food.unit
                    withCategory:food.category
                       isExpired:isExpired];
     }
-    
-    
     
     return cell;
 }
