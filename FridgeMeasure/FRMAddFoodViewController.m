@@ -8,7 +8,7 @@
 
 #import "FRMAddFoodViewController.h"
 #import "DataStack.h"
-#import "Food+helper.h"
+#import "Food.h"
 
 @interface FRMAddFoodViewController ()
 
@@ -22,10 +22,6 @@
 @property (strong, nonatomic) NSMutableArray *notificationsArray;
 @property (strong, nonatomic) Food *food;
 
-#pragma mark - Properties -
-
-@property (strong, nonatomic) DataStack *dataStack;
-
 @end
 
 @implementation FRMAddFoodViewController
@@ -36,6 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = self.category.name;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,13 +41,6 @@
 }
 
 #pragma mark - Lazy Instantiation -
-
-- (DataStack *)dataStack {
-    if (!_dataStack) {
-        _dataStack = [DataStack new];
-    }
-    return _dataStack;
-}
 
 - (NSMutableArray *)notificationsArray {
     if (!_notificationsArray) {
@@ -77,7 +67,7 @@
     localNotification.alertBody = [NSString stringWithFormat:@"%@ is almost expired", self.nameTextField.text];
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     localNotification.applicationIconBadgeNumber = [[UIApplication sharedApplication] applicationIconBadgeNumber] + 1;
-    localNotification.userInfo = @{@"identifier" : self.food.identifier};
+    
     
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
@@ -96,9 +86,9 @@
     
     if (![self.nameTextField.text isEqualToString:@""] && ![self.unitTextField.text isEqualToString:@""]) {
         
-        self.food = [Food insertWithManageObjectContext:self.dataStack.context withName:self.nameTextField.text withDate:self.datePicker.date withUnit:self.unitTextField.text withCategory:self.category.name];
+        self.food = [Food insertWithManageObjectContext:[DataStack sharedManager].context withName:self.nameTextField.text withDate:self.datePicker.date withUnit:self.unitTextField.text withCategory:self.category.name];
         
-        // Save core data
+        [[DataStack sharedManager] save];
         
         [self.navigationController popToRootViewControllerAnimated:YES];
         [self setupLocalNotification];

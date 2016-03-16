@@ -17,6 +17,15 @@
 
 @implementation DataStack
 
++(instancetype)sharedManager {
+    static id sharedManager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [[self alloc] init];
+    });
+    return sharedManager;
+}
+
 - (instancetype)init
 {
     self = [super init];
@@ -70,6 +79,10 @@
     if (!didSave) {
         NSLog(@"Save failed! %@", saveError);
     }
+}
+
+- (void)deleteObject:(NSManagedObject *)object {
+    [self.context deleteObject:object];
 }
 
 @end

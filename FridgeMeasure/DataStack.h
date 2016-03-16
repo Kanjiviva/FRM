@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
 
++(instancetype)sharedManager;
 - (void)save;
+- (void)deleteObject:(NSManagedObject *)object;
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86EA63A61C98903E00318A2A /* FRMListTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EA63A51C98903E00318A2A /* FRMListTableViewCellModel.m */; };
+		86EA63B11C98A5AF00318A2A /* Food+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EA63AE1C98A5AF00318A2A /* Food+CoreDataProperties.m */; };
+		86EA63B21C98A5AF00318A2A /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EA63B01C98A5AF00318A2A /* Food.m */; };
 		AADA29641C96889E00595F90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA29631C96889E00595F90 /* main.m */; };
 		AADA29671C96889E00595F90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA29661C96889E00595F90 /* AppDelegate.m */; };
 		AADA296A1C96889E00595F90 /* FRMCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AADA29691C96889E00595F90 /* FRMCategoryViewController.m */; };
@@ -22,9 +25,6 @@
 		AAEA19631C969C1400DBD0EF /* DataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA19621C969C1400DBD0EF /* DataStack.m */; };
 		AAEA19681C96A2BB00DBD0EF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEA19671C96A2BB00DBD0EF /* CoreData.framework */; };
 		AAEA196C1C96A39300DBD0EF /* FRMListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEA196B1C96A39300DBD0EF /* FRMListTableViewCell.m */; };
-		AAED6C4F1C98791F0091B57F /* Food+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED6C4C1C98791F0091B57F /* Food+CoreDataProperties.m */; };
-		AAED6C501C98791F0091B57F /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED6C4E1C98791F0091B57F /* Food.m */; };
-		AAED6C531C987A600091B57F /* Food+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED6C521C987A600091B57F /* Food+helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		86EA63A41C98903E00318A2A /* FRMListTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRMListTableViewCellModel.h; sourceTree = "<group>"; };
+		86EA63A51C98903E00318A2A /* FRMListTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRMListTableViewCellModel.m; sourceTree = "<group>"; };
+		86EA63AD1C98A5AF00318A2A /* Food+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food+CoreDataProperties.h"; sourceTree = "<group>"; };
+		86EA63AE1C98A5AF00318A2A /* Food+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Food+CoreDataProperties.m"; sourceTree = "<group>"; };
+		86EA63AF1C98A5AF00318A2A /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		86EA63B01C98A5AF00318A2A /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 		AADA295F1C96889E00595F90 /* FridgeMeasure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeMeasure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AADA29631C96889E00595F90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AADA29651C96889E00595F90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,12 +71,6 @@
 		AAEA19671C96A2BB00DBD0EF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AAEA196A1C96A39300DBD0EF /* FRMListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FRMListTableViewCell.h; sourceTree = "<group>"; };
 		AAEA196B1C96A39300DBD0EF /* FRMListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FRMListTableViewCell.m; sourceTree = "<group>"; };
-		AAED6C4B1C98791F0091B57F /* Food+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Food+CoreDataProperties.h"; path = "../Food+CoreDataProperties.h"; sourceTree = "<group>"; };
-		AAED6C4C1C98791F0091B57F /* Food+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Food+CoreDataProperties.m"; path = "../Food+CoreDataProperties.m"; sourceTree = "<group>"; };
-		AAED6C4D1C98791F0091B57F /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Food.h; path = ../Food.h; sourceTree = "<group>"; };
-		AAED6C4E1C98791F0091B57F /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Food.m; path = ../Food.m; sourceTree = "<group>"; };
-		AAED6C511C987A600091B57F /* Food+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Food+helper.h"; sourceTree = "<group>"; };
-		AAED6C521C987A600091B57F /* Food+helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Food+helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,17 +172,17 @@
 		AADA298F1C968B8300595F90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AAED6C4B1C98791F0091B57F /* Food+CoreDataProperties.h */,
-				AAED6C4C1C98791F0091B57F /* Food+CoreDataProperties.m */,
-				AAED6C4D1C98791F0091B57F /* Food.h */,
-				AAED6C4E1C98791F0091B57F /* Food.m */,
+				86EA63AD1C98A5AF00318A2A /* Food+CoreDataProperties.h */,
+				86EA63AE1C98A5AF00318A2A /* Food+CoreDataProperties.m */,
+				86EA63AF1C98A5AF00318A2A /* Food.h */,
+				86EA63B01C98A5AF00318A2A /* Food.m */,
 				AADA299C1C968DEE00595F90 /* CategoryType.h */,
 				AADA299D1C968DEE00595F90 /* CategoryType.m */,
 				AAEA19611C969C1400DBD0EF /* DataStack.h */,
 				AAEA19621C969C1400DBD0EF /* DataStack.m */,
 				AAEA195E1C969BC100DBD0EF /* FoodDetail.xcdatamodeld */,
-				AAED6C511C987A600091B57F /* Food+helper.h */,
-				AAED6C521C987A600091B57F /* Food+helper.m */,
+				86EA63A41C98903E00318A2A /* FRMListTableViewCellModel.h */,
+				86EA63A51C98903E00318A2A /* FRMListTableViewCellModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -295,7 +295,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAED6C501C98791F0091B57F /* Food.m in Sources */,
+				86EA63B21C98A5AF00318A2A /* Food.m in Sources */,
+				86EA63A61C98903E00318A2A /* FRMListTableViewCellModel.m in Sources */,
 				AAEA19631C969C1400DBD0EF /* DataStack.m in Sources */,
 				AADA296A1C96889E00595F90 /* FRMCategoryViewController.m in Sources */,
 				AADA29671C96889E00595F90 /* AppDelegate.m in Sources */,
@@ -306,8 +307,7 @@
 				AAEA196C1C96A39300DBD0EF /* FRMListTableViewCell.m in Sources */,
 				AADA298E1C968ABC00595F90 /* FRMListTableViewController.m in Sources */,
 				AADA298B1C96897B00595F90 /* FRMCategoryTableViewCell.m in Sources */,
-				AAED6C4F1C98791F0091B57F /* Food+CoreDataProperties.m in Sources */,
-				AAED6C531C987A600091B57F /* Food+helper.m in Sources */,
+				86EA63B11C98A5AF00318A2A /* Food+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

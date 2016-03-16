@@ -28,21 +28,17 @@
     // Configure the view for the selected state
 }
 
-- (void)setFood:(Food *)food {
-    _food = food;
-    [self setup];
-}
-
-- (void)setup {
-    self.nameLabel.text = self.food.foodName;
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+- (void)configureWithName:(NSString *)name withDate:(NSString *)date withUnit:(NSString *)unit withCategory:(NSString *)category isExpired:(BOOL)isExpired {
+    self.nameLabel.text = name;
     
-    self.dateLabel.text = [dateFormatter stringFromDate:self.food.date];
-    self.unitLabel.text = self.food.unit;
-    self.categoryLabel.text = self.food.category;
-    if (self.food.isExpired) {
+    
+    self.dateLabel.text = date;
+    self.unitLabel.text = unit;
+    self.categoryLabel.text = category;
+    if (isExpired) {
         self.backgroundColor = [UIColor redColor];
+    } else {
+        self.backgroundColor = [UIColor whiteColor];
     }
 }
 

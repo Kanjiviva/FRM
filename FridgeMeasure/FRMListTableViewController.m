@@ -8,13 +8,17 @@
 
 #import "FRMListTableViewController.h"
 #import "FRMListTableViewCell.h"
-#import "Food+helper.h"
+#import "Food.h"
 #import "DataStack.h"
+#import "FRMListTableViewCellModel.h"
 
-@interface FRMListTableViewController ()
+@interface FRMListTableViewController () <UISearchBarDelegate>
 
-@property (strong, nonatomic) DataStack *dataStack;
 @property (strong, nonatomic) NSMutableArray *listArray;
+@property (strong, nonatomic) NSMutableArray *filterArray;
+@property (assign) BOOL isFiltered;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -24,11 +28,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataStack = [DataStack new];
+    
     self.listArray = [NSMutableArray new];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(responseToNotification:)
+                                             selector:@selector(responseToNotification)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(responseToNotification)
                                                  name:@"FoodExpired"
                                                object:nil];
     
@@ -44,8 +52,12 @@
     [self fetchListsData];
 }
 
-- (void)setListArray:(NSMutableArray *)listArray {
-    _listArray = listArray;
+#pragma mark - IBActions -
+
+- (IBAction)cancelButtonTapped:(UIButton *)sender {
+    self.searchBar.text = @"";
+    [self.searchBar resignFirstResponder];
+    self.isFiltered = NO;
     [self.tableView reloadData];
 }
 
@@ -53,20 +65,13 @@
 
 - (void)fetchListsData {
     
-    self.listArray = [[Food fetchWithContext:self.dataStack.context] mutableCopy];
-    
+    self.listArray = [[Food fetchWithContext:[DataStack sharedManager].context] mutableCopy];
+    [self.tableView reloadData];
 }
 
-- (void)responseToNotification:(NSNotification *)notification {
-    id object = notification.object;
-    if ([object isKindOfClass:[Food class]]) {
-        Food *food = object;
-        food.isExpired = @YES;
-        
-        
-        
-        [self.tableView reloadData];
-    }
+- (void)responseToNotification {
+    
+    [self.tableView reloadData];
     
     
 }
@@ -78,6 +83,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if (self.isFiltered) {
+        return [self.filterArray count];
+    }
+    
     return [self.listArray count];
 }
 
@@ -86,8 +96,27 @@
     
     FRMListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListCell" forIndexPath:indexPath];
     
-    Food *food = self.listArray[indexPath.row];
-    cell.food = food;
+    BOOL isExpired;
+    
+    if (self.isFiltered) {
+        Food *food = self.filterArray[indexPath.row];
+        isExpired = [food.date compare:[NSDate date]] == NSOrderedAscending;
+        [cell configureWithName:food.foodName
+                       withDate:[FRMListTableViewCellModel dateForFoodItem:food]
+                       withUnit:food.unit
+                   withCategory:food.category
+                      isExpired:isExpired];
+    } else {
+        Food *food = self.listArray[indexPath.row];
+        isExpired = [food.date compare:[NSDate date]] == NSOrderedAscending;
+        [cell configureWithName:food.foodName
+                       withDate:[FRMListTableViewCellModel dateForFoodItem:food]
+                       withUnit:food.unit
+                   withCategory:food.category
+                      isExpired:isExpired];
+    }
+    
+    
     
     return cell;
 }
@@ -99,9 +128,9 @@
         
         Food *food = self.listArray[indexPath.row];
         
-        [self.dataStack.context deleteObject:food];
+        [[DataStack sharedManager] deleteObject:food];
         
-        // Save
+        [[DataStack sharedManager] save];
         
         [self.listArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -109,6 +138,33 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
+}
+
+#pragma mark - Search Bar Delegate -
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if (searchText.length == 0) {
+        self.isFiltered = NO;
+    } else {
+        self.isFiltered = YES;
+        self.filterArray = [NSMutableArray array];
+        
+        for (Food *food in self.listArray) {
+            
+            NSString *foodName = food.foodName;
+            
+            NSRange foodNameRange = [foodName rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            
+            if (foodNameRange.location != NSNotFound) {
+                [self.filterArray addObject:food];
+            }
+        }
+        
+    }
+    
+    [self.tableView reloadData];
+    
 }
 
 @end

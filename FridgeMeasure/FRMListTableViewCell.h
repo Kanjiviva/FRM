@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Food.h"
 
 @interface FRMListTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) Food *food;
+- (void)configureWithName:(NSString *)name withDate:(NSString *)date withUnit:(NSString *)unit withCategory:(NSString *)category isExpired:(BOOL)isExpired;
 
 @end

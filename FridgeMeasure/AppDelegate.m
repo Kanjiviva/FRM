@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "Food+helper.h"
 #import "DataStack.h"
+#import "Food.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
     return YES;
 }
 
@@ -47,11 +48,15 @@
 
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
     
-    id object = [notification.userInfo objectForKey:@"identifier"];
-    if ([object isKindOfClass:[NSString class]]) {
-        Food *food = [Food fetchWithContext:<#(NSManagedObjectContext *)#> withIdentifier:<#(NSString *)#>]
-    }
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"FoodExpired" object:food];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"FoodExpired" object:nil];
+    
+}
+
+
+- (void)showAlertViewWhenAppIsRunningWithNotification:(UILocalNotification *)notification {
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Reminder" message:notification.alertBody preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+    [controller addAction:cancel];
 }
 
 @end

@@ -249,10 +249,16 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeQ-MD-Ltn">
                                     <rect key="frame" x="544" y="0.0" width="48" height="44"/>
                                     <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="cancelButtonTapped:" destination="kc9-tC-Rv6" eventType="touchUpInside" id="o99-g9-LRf"/>
+                                    </connections>
                                 </button>
                                 <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="6V1-vE-06y">
                                     <rect key="frame" x="0.0" y="0.0" width="536" height="44"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="kc9-tC-Rv6" id="suq-ou-5kt"/>
+                                    </connections>
                                 </searchBar>
                             </subviews>
                             <constraints>
@@ -362,6 +368,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="TAa-4L-S7T"/>
+                    <connections>
+                        <outlet property="searchBar" destination="6V1-vE-06y" id="s3o-l6-dIU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ws7-Er-F6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
